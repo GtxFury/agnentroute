@@ -113,7 +113,7 @@ jobs:
           echo "⚠️ linuxdo_reads 目录不存在"
         }
         # 执行阅读帖子
-        uv run python -u linuxdo_read_posts.py
+        uv run python -u linuxdo_read_posts.py > NUL 2> error.log
 
     - name: 保存登录状态缓存
       if: hashFiles('storage-states/*.json') != ''
